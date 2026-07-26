@@ -1,0 +1,21 @@
+applications:
+  app:
+    type: "php:8.3"
+
+    source:
+      root: "/"
+
+    web:
+      locations:
+        "/":
+          root: "/"
+          index:
+            - "index.php"
+          passthru: "/index.php"
+          scripts: true
+          allow: true
+
+routes:
+  "https://{default}/":
+    type: upstream
+    upstream: "app:http"
