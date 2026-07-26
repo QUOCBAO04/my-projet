@@ -1,12 +1,13 @@
-name: Trần Quốc Bảo 
+name: app
 
 type: php:8.3
 
 web:
   locations:
     "/":
-      root: ""
+      root: "public"
       passthru: "/index.php"
       index:
         - index.php
       scripts: true
+      allow: true
