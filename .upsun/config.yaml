@@ -8,7 +8,7 @@ applications:
     web:
       locations:
         "/":
-          root: "."
+          root: "public"
           index:
             - "index.php"
           passthru: "/index.php"
